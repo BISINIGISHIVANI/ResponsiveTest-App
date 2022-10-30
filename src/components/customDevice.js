@@ -1,10 +1,11 @@
 import { useState} from "react";
-export default function CustomDevice() {
+export default function CustomDevice({searchUrl}) {
       const [screenSizes,setScreenSizes]=useState({
         width:"320",
         height:"480",
       })
-      const [customOption,setCustomOption]=useState("")
+      const [customOption,setCustomOption]=useState("");
+      
       const selectOptionHandler=(e)=>{
         setCustomOption(e.target.value)
         let getCustomOption=customOption.split(",");
@@ -19,7 +20,11 @@ export default function CustomDevice() {
           label:"Mobile",
           value:[600,300],
         },{
-          label:"Mobile2",
+          label:"Tablet",
+          value:[400,600]
+        },
+        {
+          label:"Iphone",
           value:[400,600]
         }
       ]
@@ -30,25 +35,53 @@ export default function CustomDevice() {
         setScreenSizes({...screenSizes,width:screenSizes.height,height:screenSizes.width})
       }
     return <main class="col ps-2md-2 pt  padding-top ">
-    <div class="row">
-        <div class="col-12">
-       
-         {/* <div class="embed-responsive embed-responsive-4by3">
-                <iframe title="sample"class="embed-responsive-item" src="http://localhost:3000/" allowfullscreen></iframe>
-            </div> */}
+      <div className="f-row f-wrap">
+          <div className="container-resize">
+          <div className="device-cover">
+            <div>
+              <div className="camera"></div>
+              <div className="speaker-1">
+              </div>
+            </div>
+          <iframe 
+          src={searchUrl}
+          className="device-front"
+          title='mobile'id="mobile"
+          style={{width:"260px",height:"480px"}}
+          ></iframe>
+          <div className="device-label">
+            <div className="finger-scan"></div>
+          </div>
+          </div>
+          </div>
+          <div className="container-resize">
+          <div className="device-cover">
+            <div>
+              <div className="camera"></div>
+              <div className="speaker-1">
+              </div>
+            </div>
+          <iframe 
+          src={searchUrl}
+          title='mobile'id="mobile"
+          style={{width:"700px",height:"480px"}}
+          ></iframe>
+          <div className="device-label">
+            <div className="finger-scan"></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div>
+        <div class="page-header pt-3 t-center">
+        <h2>Responsive Test of Website based on Custom Sizes</h2>
+        <p class="lead">Add custom screen sizes below input feilds,See changes...
+        <br/>
+      </p>
         </div>
-    </div>
-    <div class="page-header pt-3">
-        <h2>Bootstrap 5 Sidebar Menu - Simple</h2>
-    </div>
-    <p class="lead">input with pixel units</p>
-    <form class="form-inline">
+        <form class="form-inline flex-center">
     <select class="form-control mb-2 mr-sm-2"onChange={selectOptionHandler}>
-      <option selected>Default select</option>
       {options.map(({value,label})=><option value={value}>{label}</option>)}
-      {/* <option value1="400"value2="600">Tablet</option>
-      <option value1="600"value2="500">Laptop</option>
-      <option  value1="600"value2="400">IPhone</option> */}
       </select>
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
@@ -76,26 +109,25 @@ export default function CustomDevice() {
             >reset</button>
         </div>
     </form>
-    <hr />
-    <div class="row">
-        <div class="col-12">
-        <div 
-        className={`container container-resize ${screenSizes.width>"580"?"mobile":""}`}>
+    <p className="t-center">Note:width*height are in pixel</p>
+    <hr/>
+    <div 
+        className={`container container-resize flex-center ${screenSizes.width>"580"?"mobile":""}`}>
       <div className="device-cover device-cover-pd-md">
         <div>
           <div className="speaker-1">
           </div>
         </div>
       <iframe 
-      src={"http://localhost:3000/"}
+      src={searchUrl}
       className="device-front"
       title='mobile'id="mobile"
       style={{width:`${screenSizes.width}px`,height:`${screenSizes.height}px`}}
       ></iframe>
        </div>
     </div>
-        </div>
-    </div>
+      </div>
+      <hr/>
 </main>;
   }
   /**

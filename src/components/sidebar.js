@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 export default function Sidebar() {
-  const [fontStyle,setFontStyle]=useState("sans-serif")
-  // let changeStyleArr=fontStyle.split("','");
-  const fontStyleHandler=(e)=>{
-   setFontStyle(e.target.value)
-  }
+  // const [fontStyle,setFontStyle]=useState("sans-serif")
+  // // let changeStyleArr=fontStyle.split("','");
+  // const fontStyleHandler=(e)=>{
+  //  setFontStyle(e.target.value)
+  // }
     return <div class="col-auto px-0">
       {/* <a href="_" data-bs-target="#sidebar" data-bs-toggle="collapse" class="border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a> */}
     <div id="sidebar" class="collapse collapse-horizontal show border-end">

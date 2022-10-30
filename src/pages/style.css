@@ -74,6 +74,20 @@
     display: flex;
     flex-direction: row;
 }
+.h2-bold{
+  font-family: cursive;
+  font-weight: 700;
+}
+.t-center{
+  text-align: center;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+.padding-sm{
+  padding:0 12px 5px 12px;
+}
 .display {
     position: relative;
     left: 0px;

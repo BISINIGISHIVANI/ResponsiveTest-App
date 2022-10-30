@@ -1,11 +1,9 @@
-import { useState ,useEffect} from "react";
+import {useEffect} from "react";
 import { toast } from "react-toastify";
-export default function Navbar() {
-  let defaultUrl="http://localhost:3000/"
-    // let defaultUrl="https://socialexplore.netlify.app/"
-    const [searchUrl,setSearchUrl]=useState(defaultUrl)
+export default function Navbar({searchUrl,setSearchUrl}) {
+  
     const searchWebsiteHandler=()=>{
-      if(1>2){
+      if(searchUrl.length===0){
         toast("please provide website link")
       }
       }
@@ -13,11 +11,14 @@ export default function Navbar() {
         localStorage.setItem("searchUrl",searchUrl)
         localStorage.getItem(searchUrl)
       },[searchUrl])
-    return <div className=" nav-sticky ">
+    return <div className=" nav-sticky padding-sm">
   <nav class="navbar navbar-light bg-light justify-content-betweenpadding-nav">
-    <div >
-  <a class="navbar-brand"href="_blank">Navbar</a>
-    </div>
+    <h2 className="h2-bold">
+    <a class="navbar-brand"href="_blank">
+    R✓ D ⇌ M
+  </a>
+    </h2>
+  
   <form class="form-inline">
     <input class="form-control mr-sm-2" 
     type="search" placeholder="Search" aria-label="Search"
