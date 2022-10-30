@@ -63,7 +63,8 @@ export default function CustomDevice({searchUrl}) {
             </div>
           <iframe 
           src={searchUrl}
-          title='mobile'id="mobile"
+          className="device-front"
+          title='mobile'
           style={{width:"700px",height:"480px"}}
           ></iframe>
           <div className="device-label">
@@ -131,22 +132,7 @@ export default function CustomDevice({searchUrl}) {
 </main>;
   }
   /**
-   * <section>
-      <div>
-}
-        </div>
-         <div>
-      <input 
-    type="search"
-    placeHolder="website url"
-    value={searchUrl}
-    onChange={(e)=>setSearchUrl(e.target.value)}
-    />
-    <button onClick={searchWebsiteHandler}>Go</button>
-         </div>
-      </div>
-      <section>
-
+   *
     <select value={customOption}onChange={selectOptionHandler}>
     {options.map(({value,label})=>(
       <option value={value}>{label}</option>
