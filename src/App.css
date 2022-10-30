@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+*,*:after,*:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-sticky{
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.collapse.show{
+    position: sticky;
+    left:0;
+    top:0;
+    z-index: 3;
+}
+.padding-top{
+    padding-top: 0.6rem;
+}
+.container.mobile{
+    transform: scale(0.5);
+    margin:-5rem auto;
+    max-width: 80%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container,#container1{
+    background: black;
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+}
+#container1{
+    z-index: 11;
+}
+#inner-container{
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.padding-nav{
+    padding: 5px 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.iphone{
+    width:350px;
+    height: 620px;
+    size-adjust: none;
+    scale: 0.7;
+}
+.align-center{
+    margin:0 auto;
+}
+.bd-md{
+    border:2px solid black;
+}
+.padding-sm{
+    padding: 0.4rem 0.2rem;
+}
+.display-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
