@@ -1,0 +1,96 @@
+.container{
+    max-width:768px;
+    margin:10px auto;
+    max-height:550px;
+  }
+.container-resize{
+    /* max-width:768px; */
+    margin:10px auto;
+    /* max-height:550px; */
+  }
+  .device-cover{
+    position:relative;
+    width:fit-content;
+    background-color:rgb(222, 116, 116);
+    color:#ffffff;
+    border:3px solid #e74c3c;
+    border-radius:30px;
+    padding:-1px 2px;
+  }
+  .device-cover-pd-md{
+    padding: 4px 9px;
+  }
+  .device-front{
+    width:100%;
+    /* height:auto; */
+    border:1px solid #333;
+    background-color:white;
+  }
+  .device-label{
+    position:relative;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:#ecf0f1;
+    text-align:center;
+    margin:15px auto 0;
+  }
+  .camera{
+    position:relative;
+    background-color:#0d0d0d;
+    width:10px;
+    height:10px;
+    text-align:center;
+    border-radius:100%;
+    margin:5px auto 2px;
+    box-shadow:0 0 2px 3px #8e8a89;
+  }
+  .speaker-1{
+    position: relative;
+    background-color:#0d0d0d;
+    width:1px;
+    height:1px;
+    text-align:center;
+    border-radius:100%;
+    margin:5px auto 2px;
+    box-shadow:0 0 1px 1px #8e8a89;
+  }
+  
+  ::-webkit-scrollbar{
+    width:0.2em;
+    background:#000;
+  }
+  iframe{
+    transform: scale(1);
+  }
+  .flip-container{
+    transform: rotate(270deg);
+    margin-top: 0;
+    position: absolute;
+    left: 120px;
+  }
+.f-row{
+    display: flex;
+    flex-direction: row;
+}
+.display {
+    position: relative;
+    left: 0px;
+}
+iframe.desktop{
+    max-width:1600px;
+    height: 992px;
+    /* transform: scale(0.3181); */
+    /* scale: 0.3181; */
+}
+.tablet{
+    max-width: 768px;
+    height: 1024px;
+    /* scale: 0.219; */
+}
+.mobile{
+ max-width: 320px;
+ height: 480px;
+ /* scale: 0.219; */
+}
