@@ -1,16 +1,13 @@
-import {useEffect} from "react";
 import { toast } from "react-toastify";
 export default function Navbar({searchUrl,setSearchUrl}) {
   
     const searchWebsiteHandler=()=>{
-      if(searchUrl.length===0){
-        toast("please provide website link")
+      if(searchUrl.length===0||searchUrl.length===12){
+        toast("Enter valid website link")
       }
+      setSearchUrl(searchUrl)
       }
-      useEffect(()=>{
-        localStorage.setItem("searchUrl",searchUrl)
-        localStorage.getItem(searchUrl)
-      },[searchUrl])
+
     return <div className=" nav-sticky padding-sm">
   <nav class="navbar navbar-light bg-light justify-content-betweenpadding-nav">
     <h2 className="h2-bold">
@@ -27,7 +24,7 @@ export default function Navbar({searchUrl,setSearchUrl}) {
     onChange={(e)=>setSearchUrl(e.target.value)}
     />
     <button class="btn  my-2 my-sm-0  btn-secondary" type="submit"
-    onClick={searchWebsiteHandler()}
+    onClick={searchWebsiteHandler}
     >Search</button>
   </form>
   </nav>
