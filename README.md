@@ -43,7 +43,7 @@ To get a local copy of the code, clone it using git:
 
 ```
 git clone : https://github.com/BISINIGISHIVANI/ResponsiveTest-App.git
-cd social-media
+cd ResponsiveTest-App
 ```
 
 Install dependencies:
