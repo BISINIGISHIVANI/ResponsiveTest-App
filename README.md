@@ -1,11 +1,8 @@
-# Social Explore
+# R✓ D ⇌ M
 
-## `social explore`
+## `R✓ D ⇌ M`
 
-Social Explore is a social media app where users can share posts and make a community.
-
-![Forks](https://img.shields.io/github/forks/BISINIGISHIVANI/social-media)
-![Stars](https://img.shields.io/github/stars/BISINIGISHIVANI/social-media)
+R✓ D ⇌ M is a app where users can check Responsiveness of your website with simply pasting Url of it with Mobile and Desktop Preview .
 
 ---
 
